@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/viewpager">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/sliderdots"
+            android:gravity="center_vertical|center_horizontal"></LinearLayout>
+
+    </android.support.v4.view.ViewPager>
+    <View
+        android:layout_below="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"
+        android:id="@+id/main_view"/>
+
+    <android.support.design.widget.TabLayout
+        android:layout_below="@+id/main_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="6dp"
+        app:tabMode="fixed"
+        android:id="@+id/tab"
+        app:tabGravity="fill"
+        >
+
+    </android.support.design.widget.TabLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/divider"
+        android:layout_below="@+id/tab"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tab"
+        ></android.support.v4.view.ViewPager>
+
+</RelativeLayout>
